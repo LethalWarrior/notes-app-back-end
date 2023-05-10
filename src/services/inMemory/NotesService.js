@@ -1,6 +1,5 @@
 /* eslint-disable no-underscore-dangle */
 const { nanoid } = require('nanoid');
-const notes = require('../../notes');
 
 class NotesService {
   constructor() {
@@ -54,7 +53,7 @@ class NotesService {
     }
 
     this._notes[index] = {
-      ...notes[index],
+      ...this._notes[index],
       title,
       body,
       tags,
